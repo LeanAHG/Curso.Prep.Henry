@@ -5,9 +5,10 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
-  if (x >= y) {
+  if (x > y) {
     return x;
-  } else {
+  } 
+  else {
     return y;
   }
 }
@@ -18,7 +19,8 @@ function mayoriaDeEdad(edad) {
   //Si es menor, devolver --> "Not allowed"
   if (edad >= 18){
     return 'Allowed';
-  } else {
+  } 
+  else {
     return 'Not allowed';
   }
 }
@@ -31,9 +33,11 @@ function conection(status) {
   //Devolver el estado de conexión de usuario en cada uno de los casos.
   if (status === 1){
     return 'Online';
-  } if (status === 2){
+  } 
+  else if (status === 2){
     return 'Away';
-  } else {
+  } 
+  else {
     return 'Offline';
   }
 }
@@ -47,11 +51,14 @@ function saludo(idioma) {
   // Tu código:
   if (idioma === 'aleman'){
     return 'Guten Tag!';
-  } if (idioma === 'mandarin'){
+  } 
+  else if (idioma === 'mandarin'){
     return 'Ni Hao!';
-  } if (idioma === 'ingles'){
+  } 
+  else if (idioma === 'ingles'){
     return 'Hello!';
-  } else {
+  } 
+  else {
     return 'Hola!';
   }
 }
@@ -64,16 +71,17 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Swit,ch.
-  if (color === 'blue'){
-    return 'This is blue';
-  } if (color === 'red'){
-    return 'This is red';
-  } if (color === 'green'){
-    return 'This is green';
-  } if (color === 'orange'){
-    return 'This is orange';
-  } else {
-    return 'Color not found';
+  switch(color) {
+    case "blue":
+      return "This is blue";
+    case "red": 
+      return "This is red";
+    case "green":
+      return "This is green";
+    case "orange":
+      return "This is orange";
+    default: 
+    return "Color not found";
   }
 }
 
@@ -83,7 +91,8 @@ function esDiezOCinco(numero) {
   // Tu código:
   if (numero === 10 || numero === 5){
     return true;
-  } else {
+  } 
+  else {
     return false;
   }
 }
@@ -94,7 +103,8 @@ function estaEnRango(numero) {
   // Tu código:
   if (numero < 50 && numero > 20) {
     return true;
-  } else {
+  } 
+  else {
     return false;
   }
 }
@@ -109,7 +119,8 @@ function esEntero(numero) {
   // Tu código:
   if (numero === Math.floor(numero)){
     return true;
-  } else {
+  } 
+  else {
     return false;
   }
 }
@@ -121,11 +132,14 @@ function fizzBuzz(numero) {
   // De lo contrario, devuelve el numero
   if (numero % 3 === 0 && numero % 5 ===0){
     return 'fizzbuzz';
-  } if (numero % 3 === 0){
+  } 
+  else if (numero % 3 === 0){
     return 'fizz';
-  } if (numero % 5 ===0){
+  } 
+  else if (numero % 5 ===0){
     return 'buzz';
-  } else {
+  } 
+  else {
     return numero;
   }
 }
@@ -139,13 +153,17 @@ function operadoresLogicos(num1, num2, num3) {
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
   if (num1 < 0 || num2 < 0 || num3 < 0){
     return 'Hay negativos';
-  }if (num1 === 0 || num2 === 0 || num3 === 0){
+  }
+  else if (num1 === 0 || num2 === 0 || num3 === 0){
     return 'Error';
-  }if (num1 > num2 && num1 > num3){
+  }
+  else if (num1 > num2 && num1 > num3){
     return 'Número 1 es mayor y positivo';
-  } if (num3 > num1 && num3 > num2){
+  } 
+  else if (num3 > num1 && num3 > num2){
     return num3 + 1;
-  } else {
+  } 
+  else {
     return false;
   }
 }
@@ -158,13 +176,16 @@ function esPrimo(numero) {
   // Nota: Los números 0 y 1 NO son considerados números primos
   if (numero < 2){
     return false;
-  } else if (numero === 2){
+  } 
+  else if (numero === 2){
     return true;
-  } else {
+  } 
+  else {
     for (let i = 2 ; i < numero ; i++){
       if (numero % i === 0){
         return false;
-      } else {
+      } 
+      else {
         return true;
       }
     }  
@@ -175,11 +196,12 @@ function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
- if ( valor === true){
-   return 'Soy verdadero';
- } else {
-   return 'Soy falso';
- }
+  if ( valor === true){
+    return 'Soy verdadero';
+  } 
+  else {
+    return 'Soy falso';
+  }
 }
 
 function tablaDelSeis(){
